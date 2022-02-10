@@ -2,7 +2,7 @@ package pages;
 
 import java.util.Scanner;
 
-public class Demo {
+public class _Demo {
 
     public static void main(String[] args) {
         // Reading from System.in

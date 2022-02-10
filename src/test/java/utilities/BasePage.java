@@ -68,6 +68,34 @@ public class BasePage {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+    //secilen elementin background rengini degistirmek icin
+    public void flash(WebElement element) {
+        String bgColor = element.getCssValue("backgroundcolor");
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,200,0", element);
+            changeColor(bgColor, element);
+        }
+    }
+    // webelementin arkplan rengini değiştirir.
+    // Mesala, websayfasını test ederken, hata aldınız ve aldığınız hatanın olduğu bölümün ekran görüntüsünü
+    // kaydetmek istiyorsunuz. Ekran görüntüsü almadan önce, eğer arkaplan rengini değiştirirseniz,
+    // böylece hataya vurgu yapmış olursunuz ve görüntüye bakan kişi hatayı direk görebilir.
+
+    /**
+     *
+     * @param color
+     * @param element
+     */
+    public void changeColor(String color, WebElement element) {
+        JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Driver.getDriver());
+        javascriptExecutor.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      *
      * @param fileName is Scenario name + browser

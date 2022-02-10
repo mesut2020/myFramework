@@ -30,13 +30,13 @@ public class Tests extends BasePage {
     }
 
     @Test (priority = 1)
-    public void loginPagetest(){
+    public void loginPageTest(){
        LoginPage loginPage = new LoginPage();
        HomePage homePage = loginPage.loginToPage("Admin","admin123");
        Assert.assertTrue(loginPage.isExitWelcomeLink());
     }
 
-    @Test
+    @Test (enabled = false)
     public void testConvertStringToDouble(){
         System.out.println(isNumber("1.5"));
         System.out.println(isNumber("15"));
@@ -46,7 +46,7 @@ public class Tests extends BasePage {
         Assert.assertTrue(stringToDouble("$ 125.78")==125.78);
     }
 
-    @Test(dependsOnMethods = {"loginPagetest"})  // bu testin çalışması, startCar ın hatasız çalışmasına bağımlı
+    @Test(dependsOnMethods = {"loginPageTest"})  // bu testin çalışması, loginPagetest ın hatasız çalışmasına bağımlı
     void driveCar()
     {
         System.out.println("Car driveCar");

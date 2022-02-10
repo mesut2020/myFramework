@@ -1,0 +1,22 @@
+https://www.tasarimkodlama.com/java-programlama/java-multithreading-kullanimi/
+
+* Aynı anda birden fazla işlem yapmayı sağlayan yapıya thread denir.
+Bu yapı sayesinde işlemler birbirlerini beklemeden kendi işlemini yapar.
+
+* Implementing Runnable Interface is better than extending to ThreadClass. Because of Java can extend only one class
+
+* Multithreading: Java’da çoklu thread, maksimum CPU kullanımıyla aynı anda iki veya daha fazla iş parçacığı yürütme işlemidir.
+
+* Herthread birbirine paralel olarak ilerler.
+Threadler ayrı bellek alanı ayırmaz; dolayısıyla hafızayı korur.
+Ayrıca, threadler arasında bağlam değişimi daha az zaman alır.
+
+
+Method
+
+start()	                Bu yöntem iş parçacığının yürütülmesini başlatır ve JVM iş parçacığı üzerinde run() yöntemini çağırır.
+Sleep(int millisecond)	Bu yöntem iş parçacığının uyku moduna geçmesini sağlar, böylece iş parçacığının çalışması sağlanan milisaniye için duraklar ve bundan sonra iş parçacığı çalışmaya başlar. Bu konuların senkronizasyonunda yardımcı olur.
+getName()	            Thread ismini döndürür.
+setPriority(int newpriority)	Thread önceliğini değiştirir.
+yield()	                Durmadaki mevcut thread ve diğer threadin yürütülmesine neden olur.
+

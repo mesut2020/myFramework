@@ -260,4 +260,40 @@ public class Customers {
     public String toString() {
         return new ToStringBuilder(this).append("id", id).append("firstName", firstName).append("lastName", lastName).append("middleInitial", middleInitial).append("email", email).append("mobilePhoneNumber", mobilePhoneNumber).append("phoneNumber", phoneNumber).append("zipCode", zipCode).append("address", address).append("city", city).append("ssn", ssn).append("createDate", createDate).append("zelleEnrolled", zelleEnrolled).append("country", country).append("state", state).append("user", user).append("accounts", accounts).append("additionalProperties", additionalProperties).toString();
     }
+
+    /*
+{
+        "id": 75047,
+        "firstName": "Maria",
+        "lastName": "Maria",
+        "middleInitial": "M",
+        "email": "customer55@gmail.com",
+        "mobilePhoneNumber": "123-456-7890",
+        "phoneNumber": "123-456-7896",
+        "zipCode": "0300",
+        "address": "free world street",
+        "city": "Sacramento",
+        "ssn": "027-31-2727",
+        "createDate": "2021-02-21T21:00:00Z",
+        "zelleEnrolled": false,
+        "country": {
+            "id": 3,
+            "name": "USA",
+            "states": null
+        },
+        "state": "California",
+        "user": {
+            "id": 75194,
+            "login": "customer55",
+            "firstName": "Maria",
+            "lastName": "Clark",
+            "email": "customer55@gmail.com",
+            "activated": true,
+            "langKey": "en",
+            "imageUrl": null,
+            "resetDate": null
+        },
+        "accounts": null
+    }
+ */
 }

@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
-import pages.Demo;
+import pages._Demo;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -10,43 +10,43 @@ import java.io.PrintStream;
 import static org.testng.Assert.*;
 
 /**
- * The class containing your tests for the {@link Demo} class.  Make sure you
+ * The class containing your tests for the {@link _Demo} class.  Make sure you
  * test all methods in this class (including both
- * {@link Demo#main(String[])} and
- * {@link Demo#isTriangle(double, double, double)}).
+ * {@link _Demo#main(String[])} and
+ * {@link _Demo#isTriangle(double, double, double)}).
  */
 
-public class DemoTest {
+public class _DemoTest {
 
     @Test
     public void test_isTriangle_1(){
-        assertTrue(Demo.isTriangle(5,12,13));
+        assertTrue(_Demo.isTriangle(5,12,13));
     }
 
     @Test
     public void test_isTriangle_2(){
-        assertTrue(Demo.isTriangle(3,4,5));
+        assertTrue(_Demo.isTriangle(3,4,5));
     }
 
     @Test
     public void test_isTriangle_3(){
-        assertTrue(Demo.isTriangle(10,6,8));
+        assertTrue(_Demo.isTriangle(10,6,8));
     }
 
     @Test
     public void test_isNOT_Triangle_1(){
-        assertFalse(Demo.isTriangle(12,5,18));
+        assertFalse(_Demo.isTriangle(12,5,18));
     }
 
     @Test
     public void test_isNOT_Triangle_2(){
-        assertFalse(Demo.isTriangle(1,2,-1));
+        assertFalse(_Demo.isTriangle(1,2,-1));
     }
 
     @Test
     public void mainTestPos_1(){
 
-        ByteArrayInputStream in = new ByteArrayInputStream("2 12 13".getBytes());
+        ByteArrayInputStream in = new ByteArrayInputStream("5 12 13".getBytes());
         System.setIn(in);
 
 
@@ -54,7 +54,7 @@ public class DemoTest {
         System.setOut(new PrintStream(out));
 
         String [] args = {};
-        Demo.main(args);
+        _Demo.main(args);
 
         String consoleOutput = "Enter side 1: \n";
         consoleOutput += "Enter side 2: \n";
@@ -74,7 +74,7 @@ public class DemoTest {
         System.setOut(new PrintStream(out));
 
         String [] args = {};
-        Demo.main(args);
+        _Demo.main(args);
 
         String consoleOutput = "Enter side 1: \n";
         consoleOutput += "Enter side 2: \n";
