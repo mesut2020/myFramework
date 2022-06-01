@@ -46,7 +46,7 @@ public class LoginPage extends BasePage {
     public boolean isExitWelcomeLink(){
         return isElementExist(welcomeLink);
     }
-    public boolean isExitLoginBitton(){
+    public boolean isExitLoginButton(){
         return isElementExist(loginBtn);
     }
     public boolean isExitInvalidCredentialsMessage(){
