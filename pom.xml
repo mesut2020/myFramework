@@ -122,7 +122,7 @@
         <dependency> <!-- for extracting json as pojo -->
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.8</version>
+            <version>2.12.7.1</version>
         </dependency>
              <!-- 1 repository in your GitHub account might be affected by a security vulnerability found in org.codehaus.jackson:jackson-mapper-asl 
         <dependency>
